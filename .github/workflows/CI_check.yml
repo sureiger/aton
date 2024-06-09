@@ -26,8 +26,8 @@ jobs:
           tags: sug/myserver:latest
       -
         name: Run Docker container
-        run: docker run -d -p 80:80 -p 443:443 sug/myserver
-        with:
-          context: ./docker/
+        run: |
+         cd ./docker
+         docker run -d -p 80:80 -p 443:443 sug/myserver
 
   
