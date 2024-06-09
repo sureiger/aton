@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  nginx-entrypoing:
+    image: nginx:latest 
+    restart: always 
+    ports:
+      - "80:80" 
+      - "443:443"
+    volumes:
+      - ./html:/usr/share/nginx/html 
+      - ./conf:/etc/nginx/conf.d 
+      - ./certs:/etc/ssl/certs
+      - ./private:/etc/ssl/private 
