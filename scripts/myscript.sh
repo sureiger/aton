@@ -4,11 +4,11 @@ used_space=$(df / | grep / | awk '{print $5}' | sed 's/%//g')
 
 smtp_server='smtp.yandex.ru'
 smtp_port=587
-username='sergei.sugar'
-password='PFepno,&5082'
+username='user'
+password='passwd'
 
-from='sergei.sugar@yandex.ru'
-to='sgz.killer@gmail.com'
+from='example@yandex.ru'
+to='example@gmail.com'
 subject='Alarm'
 body='Привет! У тебя свободного объема менее 85%.'
 
