@@ -24,13 +24,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       
-      - name: Print Happy Message for CI finish
+      - name: Print start pipelinde
         run: echo "Этап сборки - создание Docker конейнера..."
-     
-      - name: Print Happy Message for CI finish
+    
+      - name: Change directory
+        run: cd docker/
+      
+      - name: Docker build
         run: docker build -t sug/myserver:latest .
       
-      - name: Print Happy Message for CI finish
+      - name: Print end docker build
         run: echo "Сборка завершена и Docker контейнер создан."
 
       - name: Print Happy Message for CI finish
