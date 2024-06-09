@@ -26,9 +26,10 @@ jobs:
       
       - name: Print start pipelinde
         run: echo "Этап сборки - создание Docker конейнера..."
+        
     
       - name: Change directory
-        run: cd ./docker/
+        run: cd aton/docker/
       
       - name: Docker build
         run: docker build -t sug/myserver:latest .
