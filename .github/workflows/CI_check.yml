@@ -28,6 +28,7 @@ jobs:
         name: Run Docker container
         run: |
          cd ./docker
+         docker build -t sug/myserver .
          docker run -d -p 80:80 -p 443:443 sug/myserver
 
   
