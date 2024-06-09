@@ -43,4 +43,13 @@ jobs:
           username: ${{ secrets.SERVER_USER_LOGIN }}
           key: ${{ secrets.SERVER_USER_KEY }}
           script_stop: true
-          script: ./deploy.sh
+          script: |
+           echo "Stop container"
+           docker stop leopard >> /dev/null
+           docker rm leopard >> /dev/null
+           docker image rm sureiger/myserver
+           echo "Pull  image"
+           docker pull sureiger/myserver
+           echo "Start leopard container"
+           docker run --name leopard -d -p 80:80 -p 443:443 sureiger/ >> /dev/nullmyserver
+           echo "Finish deploying!"
