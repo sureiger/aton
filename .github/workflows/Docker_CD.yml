@@ -45,11 +45,11 @@ jobs:
           script_stop: true
           script: |
            echo "Stop container"
-           docker stop leopard >> /dev/null
-           docker rm leopard >> /dev/null
-           docker image rm sureiger/myserver
+           sudo docker stop leopard >> /dev/null
+           sudo docker rm leopard >> /dev/null
+           sudo docker image rm sureiger/myserver
            echo "Pull  image"
-           docker pull sureiger/myserver
+           sudo docker pull sureiger/myserver
            echo "Start leopard container"
-           docker run --name leopard -d -p 80:80 -p 443:443 sureiger/ >> /dev/nullmyserver
+           sudo docker run --name leopard -d -p 80:80 -p 443:443 sureiger/ >> /dev/nullmyserver
            echo "Finish deploying!"
