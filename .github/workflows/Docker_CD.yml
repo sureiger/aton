@@ -43,4 +43,4 @@ jobs:
           username: ${{ secrets.SERVER_USER_LOGIN }}
           key: ${{ secrets.SERVER_USER_KEY }}
           script_stop: true
-          script: bash deploy.sh
+          script: ./deploy.sh
