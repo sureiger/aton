@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 # Удаляем стандартный конфигурационный файл nginx
-RUN rm /etc/nginx/conf.d/default.conf
+#RUN rm /etc/nginx/conf.d/default.conf
 
 # Копируем наш конфигурационный файл nginx
 COPY nginx.conf /etc/nginx/conf.d/

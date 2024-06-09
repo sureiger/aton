@@ -1,10 +1,10 @@
 version: '3.8'
 services:
-  nginx-entrypoint:
-    image: nginx-custom:latest 
+  nginx-entrypoing:
+    image: nginx:latest 
     restart: always 
     ports:
-      - "8080:80" 
+      - "80:80" 
       - "443:443"
     volumes:
       - ./html:/usr/share/nginx/html 
