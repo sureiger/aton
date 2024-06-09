@@ -42,7 +42,7 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USER_LOGIN }}
           key: ${{ secrets.SERVER_USER_KEY }}
-          script_stop: true
+          #script_stop: true
           script: |
            echo "Stop container"
            sudo docker stop leopard >> /dev/null
