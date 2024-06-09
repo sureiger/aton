@@ -51,5 +51,5 @@ jobs:
            echo "Pull  image"
            sudo docker pull sureiger/myserver
            echo "Start leopard container"
-           sudo docker run --name leopard -d -p 80:80 -p 443:443 sureiger/ >> /dev/nullmyserver
+           sudo docker run --name leopard -d -p 80:80 -p 443:443 sureiger/myserver >> /dev/null
            echo "Finish deploying!"
