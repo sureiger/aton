@@ -19,22 +19,14 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v3
-        with:
-          images: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO_NAME }}
-          tags: latest
-          labels: latest
-          
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
           context: ./docker
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-  
+          tags: sug/myserver:latest
+
+      
   
   server_update:
     needs: push_to_registry
