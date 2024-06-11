@@ -6,9 +6,8 @@
 
 
   vars:
-    source_folder: /etc/ansible/
+    source_folder: /html
     dest_folder  : /var/www/html/
-    dest_cert    : /etc/nginx/ssl/
 
   tasks:
 
@@ -34,16 +33,9 @@
   
   - name: Copy configuration files
     template:
-     src: ./html/nginx.conf
+     src: "{{ source_folder }}"    
      dest: /etc/nginx/nginx.conf
     notify: Restart nginx
-
-  - name: Copy cert
-    copy:
-      src: "{{ item.src }}"
-      dest: "{{ item.dest }}"
-    with_items:
-    - {src: {{ source_folde
 
   handlers:
   - name: Restart nginx
