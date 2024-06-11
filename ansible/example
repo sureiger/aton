@@ -1,0 +1,29 @@
+PLAY [Install Nginx and upload my page] ****************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [Update apt cache] ********************************************************
+changed: [localhost]
+
+TASK [Install required packages] ***********************************************
+changed: [localhost]
+
+TASK [Start Web Server] ********************************************************
+ok: [localhost]
+
+TASK [Check 80 port] ***********************************************************
+ok: [localhost]
+
+TASK [Copy MyPage file to Web Server] ******************************************
+changed: [localhost]
+
+TASK [Copy configuration files] ************************************************
+changed: [localhost]
+
+RUNNING HANDLER [Restart nginx] ************************************************
+changed: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=8    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

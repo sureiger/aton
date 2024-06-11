@@ -1,12 +1,12 @@
 ---
 
 - name: Install Nginx and upload my page
-  hosts: all
+  hosts: localhost
   become: yes
 
 
   vars:
-    source_folder: /html
+   # source_folder: /html
     dest_folder  : /var/www/html/
 
   tasks:
@@ -27,14 +27,14 @@
 
   - name: Copy MyPage file to Web Server
     template:
-     src: "{{ source_folder }}" 
+     src: ./index.html
      dest: "{{ dest_folder }}" 
     notify: Restart nginx
   
   - name: Copy configuration files
     template:
-     src: "{{ source_folder }}"    
-     dest: /etc/nginx/nginx.conf
+     src: ./nginx.conf
+     dest: /etc/nginx/conf.d/
     notify: Restart nginx
 
   handlers:
