@@ -1,0 +1,65 @@
+https://localhost:443
+*   Trying 127.0.0.1:443...
+* Connected to localhost (127.0.0.1) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* TLSv1.0 (OUT), TLS header, Certificate Status (22):
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* TLSv1.2 (IN), TLS header, Certificate Status (22):
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS header, Finished (20):
+* TLSv1.2 (IN), TLS header, Supplemental data (23):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.2 (IN), TLS header, Supplemental data (23):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS header, Supplemental data (23):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.2 (IN), TLS header, Supplemental data (23):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.2 (OUT), TLS header, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (OUT), TLS header, Supplemental data (23):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: C=RU; ST=Some-State; L=Moscow; O=Internet Widgits Pty Ltd; CN=leopard
+*  start date: Jun  9 13:49:22 2024 GMT
+*  expire date: Jun  9 13:49:22 2025 GMT
+*  issuer: C=RU; ST=Some-State; L=Moscow; O=Internet Widgits Pty Ltd; CN=leopard
+*  SSL certificate verify result: self-signed certificate (18), continuing anyway.
+* TLSv1.2 (OUT), TLS header, Supplemental data (23):
+> GET / HTTP/1.1
+> Host: localhost
+> User-Agent: curl/7.81.0
+> Accept: */*
+> 
+* TLSv1.2 (IN), TLS header, Supplemental data (23):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.2 (IN), TLS header, Supplemental data (23):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* old SSL session ID is stale, removing
+* TLSv1.2 (IN), TLS header, Supplemental data (23):
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: nginx/1.27.0
+< Date: Tue, 11 Jun 2024 16:15:14 GMT
+< Content-Type: text/html
+< Content-Length: 219
+< Last-Modified: Sun, 09 Jun 2024 15:19:18 GMT
+< Connection: keep-alive
+< ETag: "6665c7f6-db"
+< Accept-Ranges: bytes
+< 
+<HTML>
+<HEAD>
+<TITLE>MYSERVER</TITLE>
+<BODY bgcolor="orange">
+<CENTER>
+<br><br><br><br>
+<br><br><br><br>
+<font color="yellow"><h2>This WebServer build by </h2>
+<font color="blue"><h2>Docker-compose</h2>
+</body>
+</HTML>
+* Connection #0 to host localhost left intact
